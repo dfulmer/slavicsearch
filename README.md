@@ -35,7 +35,7 @@ Give the command:
 ```perl slvr_extract.pl -i [name of the MARC binary file] -o [<out_base>]```
 
 An example:
-```perl slvr_extract.pl -i slavic_search_2023052216_33680199200006381_new.mrc test2```
+```perl slvr_extract.pl -i slavic_search_2023052216_33680199200006381_new.mrc -o test2```
 
 This will create two files:  
 <out_base>_rpt.txt  
