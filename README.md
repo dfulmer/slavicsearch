@@ -35,7 +35,7 @@ Give the command:
 ```perl slvr_extract.pl -i [name of the MARC binary file] -o [<out_base>]```
 
 An example:
-```perl slvr_extract.pl -i slavic_search_2023052216_33680199200006381_new.mrc test2```
+```perl slvr_extract.pl -i slavic_search_2023052216_33680199200006381_new.mrc -o test2```
 
 This will create two files:  
 <out_base>_rpt.txt  
@@ -48,5 +48,15 @@ The next script uses the search keys of the last script to search for matches:
 
 An example:
 ```perl slvr_report.pl  -i test2.txt -o slvr_20240808```
+
+## Usage for the shell script run_slavicsearch.sh
+
+This script runs through the whole process. Put one .mrc file in your working directory, then give the command:  
+```bash run_slavicsearch.sh```
+
+And find all output in a folder named yyyymmddhhss.
+
+Before you wrap up, you might want to delete the folder containing the working files and reports like this:  
+```rm -r yyyymmddhhss/```
 
 When you're done, type ‘exit’ and press Enter.
