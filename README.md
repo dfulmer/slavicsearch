@@ -56,4 +56,7 @@ This script runs through the whole process. Put one .mrc file in your working di
 
 And find all output in a folder named yyyymmddhhss.
 
+Before you wrap up, you might want to delete the folder containing the working files and reports like this:  
+```rm -r yyyymmddhhss/```
+
 When you're done, type ‘exit’ and press Enter.
