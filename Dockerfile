@@ -20,5 +20,7 @@ RUN cpanm MARC::Lint
 RUN cpanm Net::Z3950::ZOOM
 RUN cpanm Dotenv
 
+ARG UNAME=app
+
 WORKDIR /app
 ENV PERL5LIB=/app/lib
