@@ -21,6 +21,7 @@ RUN cpanm Net::Z3950::ZOOM
 RUN cpanm Dotenv
 
 ARG UNAME=app
+ARG UID=1000
 
 WORKDIR /app
 ENV PERL5LIB=/app/lib
