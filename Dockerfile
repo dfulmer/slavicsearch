@@ -22,6 +22,7 @@ RUN cpanm Dotenv
 
 ARG UNAME=app
 ARG UID=1000
+ARG GID=1000
 
 WORKDIR /app
 ENV PERL5LIB=/app/lib
