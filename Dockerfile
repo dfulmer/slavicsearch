@@ -23,6 +23,7 @@ RUN cpanm Dotenv
 ARG UNAME=app
 ARG UID=1000
 ARG GID=1000
+RUN groupadd -g ${GID} -o ${UNAME}
 
 WORKDIR /app
 ENV PERL5LIB=/app/lib
