@@ -17,7 +17,8 @@ if [ ${#mrc_files[@]} -gt 1 ]; then
 fi
 
 # Get the current date, hour, and minute in the format yyyymmddhhmm
-NOW=$(date +"%Y%m%d%H%M")
+NOW=$(date +"%Y%m%d")
+FOLDERNOW=$(date +"%Y%m%d%H%M")
 
 # Announce the action
 echo "Starting run_slavicsearch.sh ... "
@@ -31,13 +32,13 @@ perl slvr_extract.pl -i "${mrc_files[0]}" -o "$NOW"
 perl slvr_report.pl -i "${NOW}.txt" -o "slvr_$NOW"
 
 # Create a new folder named after the NOW variable
-mkdir "$NOW"
+mkdir "$FOLDERNOW"
 
 # Move files with specific extensions into the new folder
-mv *.tsv *.txt *.mrc *.marc *.log "$NOW" 2>/dev/null
+mv *.tsv *.txt *.mrc *.marc *.log "$FOLDERNOW" 2>/dev/null
 
 # Exit message
-echo "  Reports are in folder $NOW"
+echo "  Reports are in folder $FOLDERNOW"
 echo "Ending run_slavicsearch.sh"
 
 # Exit the script
