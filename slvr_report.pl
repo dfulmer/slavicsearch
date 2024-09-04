@@ -312,7 +312,7 @@ foreach my $type (sort keys %type_cnt) {
 }
 
 print $RPT_SUMMARY join("\t", "Slavic search summary results, run date is $today", "***"), "\n";
-print $RPT_SUMMARY join("\t", "'===========================", "==="), "\n";
+print $RPT_SUMMARY join("\t", "****************************", "***"), "\n";
 print $RPT_SUMMARY join("\t", "Alma records searched:", $incnt), "\n";
 print $RPT_SUMMARY join("\t", "OCLC record found, selected for Alma record:", $counters->{match_selected}), "\n";
 print $RPT_SUMMARY join("\t", "OCLC record(s) found, near match selected for Alma record:", $counters->{near_match_selected}), "\n";
